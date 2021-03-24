@@ -11,15 +11,16 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = SpeedGauge
 TEMPLATE = app
 
+INCLUDEPATH = ../../\
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
+        ../../qcgaugewidget.cpp \
+        mainwindow.cpp
     #../../source/qcgaugewidget.cpp \
-    qcgaugewidget.cpp
 
 HEADERS  += mainwindow.h \
+    ../../qcgaugewidget.h
     #../../source/qcgaugewidget.h \
-    qcgaugewidget.h
 
 FORMS    += mainwindow.ui
 

@@ -45,6 +45,11 @@ public:
 	QcGlassItem* addGlass(float position);
 	QcAttitudeMeter* addAttitudeMeter(float position);
 
+    QcLabelItem* label;
+    QcArcItem* arc;
+    QcNeedleItem* needle;
+
+    void setColour (const QColor& color);
 
 	void addItem(QcItem* item, float position);
 	int removeItem(QcItem* item);
@@ -132,7 +137,7 @@ public:
 	explicit QcBackgroundItem(QObject *parent = 0);
 	void draw(QPainter*);
 	void addColor(float position, const QColor& color);
-	void clearrColors();
+    void clearColors();
 
 
 private:

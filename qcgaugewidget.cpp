@@ -7,6 +7,13 @@ QcGaugeWidget::QcGaugeWidget(QWidget *parent) :
 	setMinimumSize(250, 250);
 }
 
+void QcGaugeWidget::setColour (const QColor& color)
+{
+    arc->setColor(color);
+    label->setColor(color);
+}
+
+
 QcBackgroundItem *QcGaugeWidget::addBackground(float position)
 {
 	QcBackgroundItem * item = new QcBackgroundItem(this);
@@ -37,6 +44,7 @@ QcValuesItem *QcGaugeWidget::addValues(float position)
 QcArcItem *QcGaugeWidget::addArc(float position)
 {
 	QcArcItem * item = new QcArcItem(this);
+    arc = item;
 	item->setColor(Qt::white);
 	item->setPosition(position);
 	mItems.append(item);
@@ -54,6 +62,7 @@ QcColorBand *QcGaugeWidget::addColorBand(float position)
 QcNeedleItem *QcGaugeWidget::addNeedle(float position)
 {
 	QcNeedleItem * item = new QcNeedleItem(this);
+    needle = item;
 	item->setPosition(position);
 	mItems.append(item);
 	return item;
@@ -62,6 +71,7 @@ QcNeedleItem *QcGaugeWidget::addNeedle(float position)
 QcLabelItem *QcGaugeWidget::addLabel(float position)
 {
 	QcLabelItem * item = new QcLabelItem(this);
+    label = item;
 	item->setColor(Qt::white);
 	item->setPosition(position);
 	mItems.append(item);
@@ -315,7 +325,7 @@ void QcBackgroundItem::addColor(float position, const QColor &color)
 	update();
 }
 
-void QcBackgroundItem::clearrColors()
+void QcBackgroundItem::clearColors()
 {
 	mColors.clear();
 }
