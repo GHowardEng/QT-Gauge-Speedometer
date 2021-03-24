@@ -48,6 +48,7 @@ public:
     QcLabelItem* label;
     QcArcItem* arc;
     QcNeedleItem* needle;
+    QcLabelItem* titleLabel;
 
     void setColour (const QColor& color);
 

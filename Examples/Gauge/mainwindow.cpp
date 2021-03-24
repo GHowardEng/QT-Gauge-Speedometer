@@ -35,36 +35,12 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    mSpeedGauge = new QcGaugeWidget;
-    mSpeedGauge->addBackground(99);
-    QcBackgroundItem *bkg1 = mSpeedGauge->addBackground(92);
-    bkg1->clearColors();
-    bkg1->addColor(0.1,Qt::black);
-    bkg1->addColor(1.0,Qt::white);
+    mSpeedGauge = new QcGaugeWidget();
+    mSpeedGauge->setColour(Qt::cyan);
+    mSpeedGauge->titleLabel->setText("km/h");
+    mSpeedGauge->needle->setValueRange(0,80);
 
-    QcBackgroundItem *bkg2 = mSpeedGauge->addBackground(88);
-    bkg2->clearColors();
-    bkg2->addColor(0.1,Qt::gray);
-    bkg2->addColor(1.0,Qt::darkGray);
-
-    mSpeedGauge->addArc(55);
-    mSpeedGauge->addDegrees(65)->setValueRange(0,120);
-    mSpeedGauge->addColorBand(50);
-
-    mSpeedGauge->addValues(80)->setValueRange(0,120);
-
-    mSpeedGauge->addLabel(70)->setText("Km/h");
-    QcLabelItem *lab = mSpeedGauge->addLabel(40);
-    lab->setText("0");
-    mSpeedNeedle = mSpeedGauge->addNeedle(60);
-    mSpeedNeedle->setLabel(lab);
-    mSpeedNeedle->setColor(Qt::white);
-    mSpeedNeedle->setValueRange(0,80);
-    mSpeedGauge->addBackground(7);
-    mSpeedGauge->addGlass(88);
     ui->verticalLayout->addWidget(mSpeedGauge);
-
-
 }
 
 MainWindow::~MainWindow()
@@ -74,5 +50,5 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_horizontalSlider_valueChanged(int value)
 {
-    mSpeedNeedle->setCurrentValue(value);
+   mSpeedGauge->needle->setCurrentValue(value);
 }

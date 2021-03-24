@@ -5,6 +5,31 @@ QcGaugeWidget::QcGaugeWidget(QWidget *parent) :
 	QWidget(parent)
 {
 	setMinimumSize(250, 250);
+
+    this->addBackground(99);
+    QcBackgroundItem *bkg1 = this->addBackground(92);
+    bkg1->clearColors();
+    bkg1->addColor(0.1,Qt::black);
+    bkg1->addColor(1.0,Qt::white);
+
+    QcBackgroundItem *bkg2 = this->addBackground(88);
+    bkg2->clearColors();
+    bkg2->addColor(0.1,Qt::gray);
+    bkg2->addColor(1.0,Qt::darkGray);
+
+    this->addArc(65)->setColor(Qt::blue);
+    this->addDegrees(65)->setValueRange(0,120);
+    //mSpeedGauge->addColorBand(50);
+
+
+    this->titleLabel = this->addLabel(70);
+    QcLabelItem *lab = this->addLabel(40);
+    lab->setText("0");
+    this->needle = this->addNeedle(60);
+    this->needle->setLabel(lab);
+    this->needle->setColor(Qt::yellow);
+    this->addBackground(7);
+    this->addGlass(88);
 }
 
 void QcGaugeWidget::setColour (const QColor& color)
