@@ -11,12 +11,16 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = Compass
 TEMPLATE = app
 
+INCLUDEPATH = ../../\
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    ../../source/qcgaugewidget.cpp
+        ../../qcgaugewidget.cpp \
+        mainwindow.cpp
+    #../../source/qcgaugewidget.cpp \
 
 HEADERS  += mainwindow.h \
-    ../../source/qcgaugewidget.h
+    ../../qcgaugewidget.h
+    #../../source/qcgaugewidget.h \
 
 FORMS    += mainwindow.ui
+

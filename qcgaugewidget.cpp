@@ -23,10 +23,10 @@ QcGaugeWidget::QcGaugeWidget(QWidget *parent) :
 
 
     this->titleLabel = this->addLabel(70);
-    QcLabelItem *lab = this->addLabel(40);
-    lab->setText("0");
+    valueLabel = this->addLabel(40);
+    valueLabel->setText("0");
     this->needle = this->addNeedle(60);
-    this->needle->setLabel(lab);
+    this->needle->setLabel(valueLabel);
     this->needle->setColor(Qt::yellow);
     this->addBackground(7);
     this->addGlass(88);
@@ -35,7 +35,7 @@ QcGaugeWidget::QcGaugeWidget(QWidget *parent) :
 void QcGaugeWidget::setColour (const QColor& color)
 {
     arc->setColor(color);
-    label->setColor(color);
+    valueLabel->setColor(color);
 }
 
 
@@ -96,7 +96,6 @@ QcNeedleItem *QcGaugeWidget::addNeedle(float position)
 QcLabelItem *QcGaugeWidget::addLabel(float position)
 {
 	QcLabelItem * item = new QcLabelItem(this);
-    label = item;
 	item->setColor(Qt::white);
 	item->setPosition(position);
 	mItems.append(item);

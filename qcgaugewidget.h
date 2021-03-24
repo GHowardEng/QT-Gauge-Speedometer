@@ -45,7 +45,7 @@ public:
 	QcGlassItem* addGlass(float position);
 	QcAttitudeMeter* addAttitudeMeter(float position);
 
-    QcLabelItem* label;
+    QcLabelItem* valueLabel;
     QcArcItem* arc;
     QcNeedleItem* needle;
     QcLabelItem* titleLabel;

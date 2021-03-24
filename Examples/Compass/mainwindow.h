@@ -30,7 +30,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "../../source/qcgaugewidget.h"
+#include "qcgaugewidget.h"
 
 
 namespace Ui {
