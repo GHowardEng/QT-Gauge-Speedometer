@@ -2,10 +2,10 @@
 
 <h6> Custom Gauge Widget for Qt QWidget and QMainWindows </h1>
 
-<p> This is a graphical gauage for qt/c++ applications </p>
+<p> This is a graphical gauge for qt/c++ applications </p>
 <p> With this gauge we don't use any picture or wallpaper, it is rendered at C++ Runtime by drawing </p>
-<p> Extensibile guage can be adapted to be used as Compass , Altimeter , etc... </p>
-<h5> How To use This gauge: </h5> 
+<p> Extensibile widget can be adapted for use as Compass , Altimeter , etc... </p>
+<h5> How to use this widget: </h5> 
 <ul>
 <li> First use header and source file in your project </li>
 <li> After That add vertical layout to your ui file </li>
