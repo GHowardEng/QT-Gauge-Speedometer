@@ -38,12 +38,12 @@ MainWindow::MainWindow(QWidget *parent) :
     mSpeedGauge = new QcGaugeWidget;
     mSpeedGauge->addBackground(99);
     QcBackgroundItem *bkg1 = mSpeedGauge->addBackground(92);
-    bkg1->clearrColors();
+    bkg1->clearColors();
     bkg1->addColor(0.1,Qt::black);
     bkg1->addColor(1.0,Qt::white);
 
     QcBackgroundItem *bkg2 = mSpeedGauge->addBackground(88);
-    bkg2->clearrColors();
+    bkg2->clearColors();
     bkg2->addColor(0.1,Qt::gray);
     bkg2->addColor(1.0,Qt::darkGray);
 

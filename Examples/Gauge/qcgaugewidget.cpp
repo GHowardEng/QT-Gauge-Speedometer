@@ -315,7 +315,7 @@ void QcBackgroundItem::addColor(float position, const QColor &color)
 	update();
 }
 
-void QcBackgroundItem::clearrColors()
+void QcBackgroundItem::clearColors()
 {
 	mColors.clear();
 }
